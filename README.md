@@ -2,9 +2,9 @@
 - python3.6
 - tensorflow 1.11
    - GPU: `pip install tensorflow-gpu==1.11.0`
-- 
-- nltk,numpy, pandas, json, sklearn
-- All python files from Bert's repository (https://github.com/google-research/bert)
+- tensorflow_hub 0.1.1
+- nltk,numpy, pandas, json, sklearn, matplotlib
+
 
 # Data / Models
 
