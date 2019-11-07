@@ -5,31 +5,32 @@ from datetime import datetime
 import numpy as np
 from sklearn.utils import shuffle
 
-from tensorflow import keras
+#from tensorflow import keras
 import os
-import re
+#import re
 
 #import bert
 import run_classifier
 import optimization
 import tokenization
 import modeling
-import json
+#import json
 import ast
 from os import path
 import sys
 params = sys.argv
-cate = int(params[1])
+#cate = int(params[1])
 
-categories = ['Tools_and_Home_Improvement','Patio_Lawn_and_Garden','Baby','Elec']
-category = categories[cate]
 
-init_checkpoint = '/scratch1/zha274/QAExperiment/FLTR/'
-OUTPUT_DIR = '/scratch1/zha274/QAExperiment/'+category+'_FLTR'
+
+category = params[1]
+
+init_checkpoint = './data/FLTR/'
+OUTPUT_DIR = './data/'+category+'_FLTR'
 if not os.path.exists(OUTPUT_DIR):
     os.makedirs(OUTPUT_DIR)
 
-data_path = '/scratch1/zha274/QAdata/'+category+'.txt'
+data_path = './data/'+category+'.txt'
 
 BATCH_SIZE = 180
 MAX_SEQ_LENGTH = 40

@@ -1,4 +1,4 @@
-from sklearn.model_selection import train_test_split
+#from sklearn.model_selection import train_test_split
 import pandas as pd
 import tensorflow as tf
 import tensorflow_hub as hub
@@ -6,25 +6,25 @@ from datetime import datetime
 import numpy as np
 from sklearn.utils import shuffle
 
-from tensorflow import keras
+#from tensorflow import keras
 import os
-import re
+#import re
 
 #import bert
 import run_classifier
 import optimization
 import tokenization
-import json
+#import json
 import ast
-import sys
+#import sys
 #params = sys.argv
 #FLTR = int(params[1])
 
-OUTPUT_DIR = '/scratch1/zha274/QAExperiment/FLTR'
+OUTPUT_DIR = './trained_model/FLTR'
 if not os.path.exists(OUTPUT_DIR):
     os.makedirs(OUTPUT_DIR)
 
-data_path = '/scratch1/zha274/QAdata/ALL.txt'
+data_path = './data/ALL.txt'
 BATCH_SIZE = 180
 MAX_SEQ_LENGTH = 40
 LEARNING_RATE = 2e-5
@@ -37,7 +37,6 @@ WARMUP_PROPORTION = 0.1
 SAVE_CHECKPOINTS_STEPS = 1000
 SAVE_SUMMARY_STEPS = 1000
 PAD_WORD = '[PAD]'
-
 
 # This is a path to an uncased (all lowercase) version of BERT
 BERT_MODEL_HUB = "https://tfhub.dev/google/bert_uncased_L-12_H-768_A-12/1"

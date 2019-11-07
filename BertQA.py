@@ -19,17 +19,13 @@ import ast
 import copy
 from os import path
 import sys
-
 params = sys.argv
-cate = int(params[1])
 
-
-categories = ['Tools_and_Home_Improvement','Patio_Lawn_and_Garden','Baby','Elec','ALL']
-category = categories[cate]
+category = params[1]
 
 # This is a path to an uncased (all lowercase) version of BERT
 BERT_MODEL_HUB = "https://tfhub.dev/google/bert_uncased_L-12_H-768_A-12/1"
-init_checkpoint = '/scratch1/zha274/QAExperiment/ALL/'
+init_checkpoint = './data/ALL/'
 
 OUTPUT_DIR = '/scratch1/zha274/QAExperiment/'+category
 if not os.path.exists(OUTPUT_DIR):
@@ -220,7 +216,7 @@ def model_fn_builder(num_labels, learning_rate, num_train_steps,
       checkpoint_file = OUTPUT_DIR+'/checkpoint'
              
       if path.exists(checkpoint_file) is False:
-         if path.exists(init_checkpoint) is True:
+         if path.exists(init_checkpoint+'checkpoint') is True:
              (assignment_map, initialized_variable_names,init_vars
                      ) = modeling.get_assignment_map_from_checkpoint(tvars, init_checkpoint)
 
@@ -285,11 +281,12 @@ def FLTR_Top10(t):
 print('Working on '+category)
 print('Reading datasets..')
 current_time = datetime.now()
+categories = ['Tools_and_Home_Improvement','Patio_Lawn_and_Garden','Automotive','Cell_Phones_and_Accessories','Health_and_Personal_Care','Sports_and_Outdoors','Home_and_Kitchen']
+
 data = []
-if category == 'ALL':
-    categories.pop(4)
-    for i in categories:
-        each_path = '/scratch1/zha274/QAdata/'+i+'.txt'
+if category == 'ALL':)
+    for cate in categories:
+        each_path = '/scratch1/zha274/QAdata/'+cate+'.txt'
         temp = pd.read_csv(each_path,sep='\t',encoding='utf-8',#nrows=100,
                   converters={'QA':ast.literal_eval,'reviewText':ast.literal_eval,'FLTR_scores':ast.literal_eval})
         train = data[:int(len(temp)*0.8)]
