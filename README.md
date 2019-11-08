@@ -5,6 +5,7 @@
 - tensorflow_hub 0.1.1
 - nltk,numpy, pandas, json, sklearn
 
+(Note: our code is developed based on original Bert's implementation [original](https://github.com/google-research/bert))
 
 # Data / Models
 The original dataset are from [dataset link](http://cseweb.ucsd.edu/~jmcauley/datasets.html), including Amazon QA and reviews data.
