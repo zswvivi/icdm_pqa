@@ -25,8 +25,8 @@ params = sys.argv
 
 category = params[1]
 
-init_checkpoint = './data/FLTR/'
-OUTPUT_DIR = './data/'+category+'_FLTR'
+init_checkpoint = './trained_model/FLTR/'
+OUTPUT_DIR = './trained_model/'+category+'_FLTR'
 if not os.path.exists(OUTPUT_DIR):
     os.makedirs(OUTPUT_DIR)
 

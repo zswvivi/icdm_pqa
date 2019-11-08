@@ -25,13 +25,13 @@ category = params[1]
 
 # This is a path to an uncased (all lowercase) version of BERT
 BERT_MODEL_HUB = "https://tfhub.dev/google/bert_uncased_L-12_H-768_A-12/1"
-init_checkpoint = './data/ALL/'
+init_checkpoint = './trained_model/ALL/'
 
-OUTPUT_DIR = '/scratch1/zha274/QAExperiment/'+category
+OUTPUT_DIR = './trained_model/'+category
 if not os.path.exists(OUTPUT_DIR):
     os.makedirs(OUTPUT_DIR)
   
-data_path = '/scratch1/zha274/QAdata/'+category+'.txt'
+data_path = './data/'+category+'.txt'
     
 MAX_SEQ_LENGTH = 40
 BATCH_SIZE = 180
@@ -286,7 +286,7 @@ categories = ['Tools_and_Home_Improvement','Patio_Lawn_and_Garden','Automotive',
 data = []
 if category == 'ALL':)
     for cate in categories:
-        each_path = '/scratch1/zha274/QAdata/'+cate+'.txt'
+        each_path = './data/'+cate+'.txt'
         temp = pd.read_csv(each_path,sep='\t',encoding='utf-8',#nrows=100,
                   converters={'QA':ast.literal_eval,'reviewText':ast.literal_eval,'FLTR_scores':ast.literal_eval})
         train = data[:int(len(temp)*0.8)]

@@ -165,7 +165,7 @@ def model_fn_builder(num_labels, learning_rate, num_train_steps,
   return model_fn
 
 # Crossing-training FLTR
-ALL = pd.read_csv(data_path,sep='\t',encoding='utf-8',#nrows=1000,
+ALL = pd.read_csv(data_path,sep='\t',encoding='utf-8',nrows=1000,
                   converters={'QA':ast.literal_eval,'reviewText':ast.literal_eval})
 
 ALL = shuffle(ALL)
