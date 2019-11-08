@@ -52,7 +52,7 @@ for category in categories:
     reviews=os.path.join(data_path,'reviews_'+category+'.json.gz')
     qa=os.path.join(data_path,'QA_'+category+'.json.gz')
     da = getDF(qa)
-    da = da[:300]
+    #da = da[:300] # for test purpose
     dr = getDF(reviews)
 
     # Generate qa pairs
