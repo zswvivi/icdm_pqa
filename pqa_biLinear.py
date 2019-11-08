@@ -37,9 +37,8 @@ import sys
 params = sys.argv
 
 #os.path.join(home_path, 'dataset_params.json')
-home_path = '/home/zha274/pqa'
-#data_path = '/nfs/datastore/datastore/zha274/Datav1/'
-data_path = '/flush1/zha274/data_tfidf/'
+home_path = ''
+data_path = ''
 categories = ['Automotive','Cell_Phones_and_Accessories','Sports_and_Outdoors',
               'Tools_and_Home_Improvement','Health_and_Personal_Care',
               'Home_and_Kitchen','Patio_Lawn_and_Garden']
