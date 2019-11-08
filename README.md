@@ -15,17 +15,11 @@ Pleae keep downloaded file in folder "data".
 # Dataset preprocessing
 python data_reprocess.py  
 
-# Training
-1. Cross-domain training FLTR
-   python FLTR_1st.py
-2. Fine-tuning FLTR for each category
-   python FLTR_2rd.py
-3. Cross-domian training BERTQA
-   python BertQA.py 8
-4. Fine-tunning BERTQA for each category
-   python BertQA.py
-   
-# Prediction
+# Training and Prediction
+1. Cross-domain training FLTR: python FLTR_1st.py
+2. Fine-tuning FLTR for each category, for example:  python FLTR_2rd.py Home_and_Kitchen
+3. Cross-domian training BERTQA python BertQA.py ALL
+4. Fine-tunning BERTQA for each category, for example: python BertQA.py Home_and_Kitchen
   
 # Publication
 
