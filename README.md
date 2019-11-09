@@ -7,11 +7,11 @@
 
 (Note: our code is developed based on original Bert's implementation [original](https://github.com/google-research/bert))
 
-# Data / Models
-The original dataset are from [dataset link](http://cseweb.ucsd.edu/~jmcauley/datasets.html), including Amazon QA and reviews data.
-In our work, we have chosen 7 categories, namely Tools_and_Home_Improvement, Patio_Lawn_and_Garden, Automotive, Cell_Phones_and_Accessories, Health_and_Personal_Care, Sports_and_Outdoors, Home_and_Kitchen.
-In order to replicate our results, you need to download QA (such as QA_Tools_and_Home_Improvement.json.gz) and review dataset (such as reviews_Tools_and_Home_Improvement.json.gz)in all of these categories,but please feel free to run our model on different categories.
-Pleae keep downloaded file in folder "data".
+# Data
+1. The original dataset are from [dataset link](http://cseweb.ucsd.edu/~jmcauley/datasets.html), including Amazon QA and reviews data.
+2. In our work, we have chosen 7 categories, namely Tools_and_Home_Improvement, Patio_Lawn_and_Garden, Automotive, Cell_Phones_and_Accessories, Health_and_Personal_Care, Sports_and_Outdoors, Home_and_Kitchen.
+3. In order to replicate our results, you need to download QA (such as QA_Tools_and_Home_Improvement.json.gz) and review dataset (such as reviews_Tools_and_Home_Improvement.json.gz)in all of these categories,but please feel free to run our model on different categories.
+4. Pleae keep downloaded file in folder "data".
 
 # Dataset preprocessing
 python data_reprocess.py  
