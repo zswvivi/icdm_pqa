@@ -14,7 +14,7 @@
 4. Pleae keep downloaded files in folder "data".
 
 # Dataset preprocessing
-python data_reprocess.py  
+python data_preprocess.py  
 
 # Training and Prediction
 1. Cross-domain training FLTR: python FLTR_1st.py 
