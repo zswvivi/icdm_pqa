@@ -19,7 +19,7 @@ python data_preprocess.py
 # Training and Prediction
 1. Cross-domain training FLTR: python FLTR_1st.py 
 2. Fine-tuning FLTR for each category, for example:  python FLTR_2rd.py Home_and_Kitchen
-3. Cross-domian training BERTQA python BertQA.py ALL
+3. Cross-domian training BERTQA: python BertQA.py ALL
 4. Fine-tunning BERTQA for each category, for example: python BertQA.py Home_and_Kitchen
 
 # Publication
