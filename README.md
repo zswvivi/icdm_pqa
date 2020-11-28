@@ -6,6 +6,7 @@
 - nltk,numpy, pandas, json, sklearn
 
 (Note: our code is developed based on original Bert's implementation [original](https://github.com/google-research/bert))
+
 [Annotated_Data](https://github.com/zswvivi/icdm_pqa/blob/master/data/ICDM_Annotated_Data.csv) <br>
 
 # Data
