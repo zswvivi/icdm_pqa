@@ -24,6 +24,18 @@ python data_preprocess.py
 3. Cross-domian training BERTQA: python BertQA.py ALL
 4. Fine-tunning BERTQA for each category, for example: python BertQA.py Home_and_Kitchen
 
-# Publication
 
-Zhang, Shiwei; Lau, Jay Han; Zhang, Xiuzhen; Chan, Jeffrey; Paris, Cecile. Discovering Relevant Reviews for Answering Product-related Queries. In: IEEE 19th International Conference on Data Mining; November 2019;  Beijing, China. ICDM; 2019.
+## Citation
+
+Please cite our paper if you use our model or data in your work:
+
+```bibtex
+@inproceedings{zhang2019discovering,
+  title={Discovering relevant reviews for answering product-related queries},
+  author={Zhang, Shiwei and Lau, Jey Han and Zhang, Xiuzhen and Chan, Jeffrey and Paris, Cecile},
+  booktitle={2019 IEEE International Conference on Data Mining (ICDM)},
+  pages={1468--1473},
+  year={2019},
+  organization={IEEE}
+}
+```
